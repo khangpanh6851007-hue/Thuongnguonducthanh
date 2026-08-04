@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thượng Ngươn Thánh Đức - Kỷ Nguyên Tâm Linh</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: radial-gradient(circle at center, #1b0c2e 0%, #080310 100%);
+            color: #f3e5ab;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background: rgba(20, 10, 35, 0.85);
+            border: 2px solid #d4af37;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.4), inset 0 0 15px rgba(212, 175, 55, 0.2);
+            padding: 30px 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Header / Tiêu đề */
+        .header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: #ffd700;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            font-size: 0.95rem;
+            color: #e0d0b0;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            background: rgba(255, 215, 0, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 3px solid #d4af37;
+            border-right: 3px solid #d4af37;
+            text-align: justify;
+        }
+
+        /* Khu vực nút chức năng */
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .spiritual-btn {
+            background: linear-gradient(135deg, #4a2800 0%, #2b1400 100%);
+            color: #ffd700;
+            border: 1px solid #d4af37;
+            padding: 14px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .spiritual-btn:hover {
+            background: linear-gradient(135deg, #6b3b00, #4a2800);
+            border-color: #fff;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+
+        .spiritual-btn.highlight {
+            background: linear-gradient(135deg, #b8860b, #daa520);
+            color: #1b0c2e;
+            font-weight: 750;
+            border: 1px solid #fff;
+        }
+
+        .spiritual-btn.highlight:hover {
+            background: linear-gradient(135deg, #daa520, #ffd700);
+            color: #080310;
+        }
+
+        /* Khu vực Trải Nghiệm Thẻ Thánh Đức */
+        .card-section {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px dashed #d4af37;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 10px;
+        }
+
+        .card-section h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .card-result {
+            margin-top: 15px;
+            font-style: italic;
+            color: #fff8dc;
+            font-size: 1rem;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 10px;
+        }
+
+        /* Modal / Hộp thoại thông tin */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background: #180c29;
+            border: 2px solid #ffd700;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 100%;
+            padding: 25px;
+            position: relative;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+            text-align: left;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content h2 {
+            font-family: 'Cinzel', serif;
+            color: #ffd700;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            text-align: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .modal-content p {
+            font-size: 0.95rem;
+            color: #e2d8c3;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            color: #ffd700;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Tiêu đề & Đoạn văn bản mô tả cảnh Thượng Ngươn Thánh Đức -->
+        <div class="header">
+            <h1>THƯỢNG NGƠN THÁNH ĐỨC</h1>
+            <p>
+                Thời kỳ Thượng Ngươn Thánh Đức là kỷ nguyên hoàng kim của nhân loại, nơi ánh sáng chân lý và lòng bác ái ngự trị khắp chốn. Cảnh giới ấy thanh bình vô tận, vạn vật hòa hợp trong tình thương yêu thương vô lượng, không còn tranh chấp, khổ đau hay chiến tranh, con người sống đạo đức, thuần lương và hiệp nhất cùng vũ trụ.
+            </p>
+        </div>
+
+        <!-- Các Nút Chức Năng Theo Yêu Cầu -->
+        <div class="btn-group">
+            <button class="spiritual-btn" onclick="openModal('modalCanh')">
+                ✨ Mô Tả Chi Tiết Về Cảnh Thượng Ngươn
+            </button>
+            <button class="spiritual-btn" onclick="openModal('modalTieuChuan')">
+                📜 Cách Để Đạt Tiêu Chuẩn Vào Thượng Ngươn
+            </button>
+            <button class="spiritual-btn" onclick="openModal('modalThoiGian')">
+                ⏳ Khi Nào Đến Ngày Thượng Ngươn Thánh Đức?
+            </button>
+            <!-- Nút mới thêm theo yêu cầu -->
+            <button class="spiritual-btn highlight" onclick="openModal('modalDiLac')">
+                ☸️ Phật Di Lặc Giáng Thế Độ Nhân
+            </button>
+        </div>
+
+        <!-- Khu Vực Trải Nghiệm Tâm Linh: Gieo Quẻ / Rút Thẻ -->
+        <div class="card-section">
+            <h3>🎴 Gieo Quẻ / Rút Thẻ Thánh Đức Hằng Ngày</h3>
+            <button class="spiritual-btn highlight" onclick="rutTheThanhDuc()" style="width: 100%; margin-top: 10px;">
+                🙏 Rút Thẻ Ngay
+            </button>
+            <div class="card-result" id="cardResult">
+                "Hãy tĩnh tâm, thành kính bấm nút để nhận thông điệp thiêng liêng hôm nay..."
+            </div>
+        </div>
+    </div>
+
+    <!-- CÁC HỘP THOẠI MODAL HIỂN THỊ NỘI DUNG -->
+
+    <!-- Modal 1: Mô tả cảnh Thượng Ngươn Thánh Đức -->
+    <div class="modal" id="modalCanh">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('modalCanh')">&times;</button>
+            <h2>Cảnh Thượng Ngươn Thánh Đức</h2>
+            <p>• <strong>Môi trường thiên nhiên:</strong> Khí hậu ôn hòa, đất trời trong lành, cây trái xanh tươi quanh năm, chim muông hòa ca, không còn thiên tai hay dịch bệnh khắc nghiệt.</p>
+            <p>• <strong>Đời sống xã hội:</strong> Nhân loại sống chung một mái nhà đại đồng. Không phân biệt tôn giáo, chủng tộc hay ranh giới quốc gia. Mọi người đối xử với nhau bằng lòng chân thành và bác ái.</p>
+            <p>• <strong>Đời sống tâm linh:</strong> Con người thấu suốt lý vô thường, hướng thượng, tu tâm dưỡng tính, tôn trọng sự sống của muôn loài và sống thuận theo Thiên lý.</p>
+        </div>
+    </div>
+
+    <!-- Modal 2: Tiêu chuẩn vào Thượng Ngươn -->
+    <div class="modal" id="modalTieuChuan">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('modalTieuChuan')">&times;</button>
+            <h2>Tiêu Chuẩn Vào Thượng Ngươn</h2>
+            <p>Để đủ phẩm chất bước sang kỷ nguyên mới, mỗi cá nhân cần rèn luyện:</p>
+            <p>1. <strong>Hành thiện tích đức:</strong> Luôn làm việc lành, lánh xa điều ác, từ bỏ tham, sân, si.</p>
+            <p>2. <strong>Giữ tâm trong sạch:</strong> Tu dưỡng đạo đức cá nhân, hiếu thảo với cha mẹ, hòa thuận với xóm làng.</p>
+            <p>3. <strong>Thực hành ăn chay, niệm Phật/cầu nguyện:</strong> Giảm thiểu sát sinh, nuôi dưỡng lòng từ bi đối với muôn loài vật chất.</p>
+            <p>4. <strong>Chuyển hóa nghiệp lực:</strong> Biết ăn năng sám hối lỗi lầm cũ, buông bỏ chấp niệm và hướng về ánh sáng chân lý.</p>
+        </div>
+    </div>
+
+    <!-- Modal 3: Thời gian đến Thượng Ngươn -->
+    <div class="modal" id="modalThoiGian">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('modalThoiGian')">&times;</button>
+            <h2>Thời Gian Thượng Ngươn Thánh Đức</h2>
+            <p>Theo triết lý chu kỳ vũ trụ (Vòng xoay Hạ ngươn kết thúc để mở ra chu kỳ mới):</p>
+            <p>• Thời gian không cố định theo một con số lịch năm vật lý thuần túy, mà ứng với <strong>sự chuyển hóa tâm thức của nhân loại</strong>.</p>
+            <p>• Khi phần đông nhân loại thức tỉnh, từ bỏ chiến tranh và cái ác để quay về với đạo đức lương tâm, thì đó chính là thời khắc Thượng Ngươn hiện tiền trên Trái Đất.</p>
+        </div>
+    </div>
+
+    <!-- Modal 4: Phật Di Lặc giáng thế độ nhân (Mới thêm) -->
+    <div class="modal" id="modalDiLac">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('modalDiLac')">&times;</button>
+            <h2>Phật Di Lặc Giáng Thế Độ Nhân</h2>
+            <p>Khi Đức Phật Di Lặc ra đời giáng thế để cứu độ chúng sanh trong kỷ nguyên mới, con đường Ngài lựa chọn gắn liền với duyên độ sanh của nhân loại:</p>
+            <p>🌟 <strong>Nếu đi tu:</strong> Ngài sẽ chuyển hóa tâm thức chúng sanh, dìu dắt nhân loại vào con đường giác ngộ giải thoát, trở thành <strong>Phật Vạn Thế</strong> được vạn loại tri ân, tôn kính đời đời.</p>
+            <p>👑 <strong>Còn nếu không đi tu (xuất gia):</strong> Ngài sẽ đảm nhận vai trò trị vì thế gian bằng chính pháp, đem lại thái bình thịnh vượng, trở thành <strong>Thánh Đức Chuyển Luân Thánh Vương</strong> cai quản cõi Đại Đồng.</p>
+        </div>
+    </div>
+
+    <!-- JavaScript Xử Lý Tương Tác -->
+    <script>
+        // Danh sách Thẻ Thánh Đức hàng ngày
+        const danhSachThe = [
+            "✨ Thẻ số 1: 'Hôm nay hãy mở rộng lòng khoan dung, tha thứ cho lỗi lầm của người khác để tâm hồn được nhẹ nhàng, thanh tịnh.'",
+            "✨ Thẻ số 2: 'Gieo một hạt giống thiện lành bằng lời nói ái ngữ sẽ mang lại phước báu vô lượng cho chính bạn.'",
+            "✨ Thẻ số 3: 'Sống chậm lại để lắng nghe tiếng nói bên trong nội tâm, hướng về ánh sáng từ bi cao cả.'",
+            "✨ Thẻ số 4: 'Lòng biết ơn là cội nguồn của mọi phước đức. Hãy tri ân đất trời, cha mẹ và vạn vật quanh ta.'",
+            "✨ Thẻ số 5: 'Giữ tâm bất biến giữa dòng đời vạn biến, vững vàng trên con đường tu dưỡng đạo đức.'",
+            "✨ Thẻ số 6: 'Mỗi hành động giúp đỡ người khó khăn hôm nay là một bước tiến đưa bạn đến gần hơn cảnh giới Thượng Ngươn.'"
+        ];
+
+        function rutTheThanhDuc() {
+            const resultBox = document.getElementById("cardResult");
+            resultBox.style.opacity = 0;
+            
+            setTimeout(() => {
+                const randomIndex = Math.floor(Math.random() * danhSachThe.length);
+                resultBox.innerText = danhSachThe[randomIndex];
+                resultBox.style.opacity = 1;
+            }, 200);
+        }
+
+        // Điều khiển mở Modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        // Điều khiển đóng Modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Đóng modal khi bấm ra ngoài vùng nội dung
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
