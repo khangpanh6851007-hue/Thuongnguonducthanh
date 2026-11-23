@@ -1,328 +1,456 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thượng Ngươn Thánh Đức - Kỷ Nguyên Tâm Linh</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#130d2b">
+<title>Thượng Ngươn Thánh Đức – Kỷ Nguyên Tâm Linh 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@400;500;600;700&family=Noto+Serif:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#090719;--panel:rgba(25,18,53,.88);--gold:#f6d879;--gold2:#b98b35;--cyan:#83e8e5;--ink:#f8f0d9;--muted:#c7bddb;--line:rgba(246,216,121,.3);--shadow:0 18px 55px #0008}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:Montserrat,Arial,sans-serif;background:radial-gradient(ellipse at 15% 10%,#30205b 0,transparent 38%),radial-gradient(ellipse at 85% 22%,#0d4653 0,transparent 32%),linear-gradient(145deg,#080615,#17102f 55%,#071b2b);min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.35;background-image:radial-gradient(2px 2px at 20% 30%,#fff 40%,transparent 60%),radial-gradient(1px 1px at 70% 15%,#ffe9a8 40%,transparent 60%),radial-gradient(2px 2px at 85% 70%,#8ff 40%,transparent 60%),radial-gradient(1px 1px at 40% 80%,#fff 40%,transparent 60%);background-size:240px 220px,310px 270px,360px 300px,280px 260px;animation:twinkle 8s linear infinite}
+@keyframes twinkle{50%{opacity:.65}}@keyframes glow{0%,100%{filter:drop-shadow(0 0 5px #f5d77b66)}50%{filter:drop-shadow(0 0 18px #8be9e988)}}@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+header{position:relative;text-align:center;padding:56px 18px 34px;overflow:hidden}header:after{content:"";position:absolute;width:380px;height:380px;border:1px solid #f6d87944;border-radius:50%;left:50%;top:-260px;transform:translateX(-50%);box-shadow:0 0 0 28px #f6d8790a,0 0 0 58px #83e8e508}
+.kicker{color:var(--cyan);letter-spacing:4px;font-size:.72rem;font-weight:700;text-transform:uppercase}.brand{font:800 clamp(2rem,6vw,4.2rem) Cinzel,serif;color:var(--gold);text-shadow:0 0 24px #f6d87966;margin:12px 0;animation:glow 5s infinite}.subtitle{max-width:850px;margin:0 auto;color:#e5d9c4;line-height:1.8;font-family:"Noto Serif",serif}
+.wrap{width:min(1180px,calc(100% - 28px));margin:auto;position:relative;z-index:1}.toolbar{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:18px 0 28px}.btn,button{font:600 .88rem Montserrat,sans-serif;cursor:pointer;border:1px solid var(--line);border-radius:12px;padding:11px 15px;color:var(--ink);background:linear-gradient(135deg,#382652,#172c43);transition:.22s}.btn:hover,button:hover{transform:translateY(-2px);border-color:var(--cyan);box-shadow:0 8px 24px #05030b88}.primary{color:#21172a;background:linear-gradient(135deg,#ffeaa0,#c18e31);border-color:#fff1b8}.soft{background:#ffffff0a}.danger{border-color:#b76a79;color:#ffd5dc}.small{padding:8px 11px;font-size:.78rem}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin:18px 0}.panel{grid-column:span 12;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow);backdrop-filter:blur(16px);animation:rise .5s both}.half{grid-column:span 6}.third{grid-column:span 4}.section-title{font:700 1.25rem Cinzel,serif;color:var(--gold);margin:0 0 14px}.section-title span{color:var(--cyan);font-family:Montserrat,sans-serif;font-size:.8rem;margin-right:8px}.muted{color:var(--muted);line-height:1.7}.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.feature{padding:14px;border-radius:14px;border:1px solid #83e8e533;background:linear-gradient(145deg,#ffffff0a,#83e8e508);min-height:76px}.feature b{display:block;color:var(--cyan);font-size:.86rem;margin-bottom:5px}.feature small{color:var(--muted);line-height:1.5}
+.btnrow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.field{width:100%;padding:12px 13px;border:1px solid #a99bc455;border-radius:11px;background:#090719aa;color:var(--ink);font:inherit;outline:none}.field:focus{border-color:var(--cyan);box-shadow:0 0 0 3px #83e8e522}textarea.field{min-height:100px;resize:vertical}select.field{cursor:pointer}.stack{display:grid;gap:10px}.result{border:1px dashed var(--gold2);border-radius:14px;padding:16px;color:#fff4d3;line-height:1.7;background:#f6d8790a;min-height:55px}.counter{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px;border-radius:13px;background:#ffffff09;border:1px solid #ffffff12;margin:8px 0}.count{font:700 1.5rem Cinzel,serif;color:var(--gold);min-width:60px;text-align:center}.day-card{border-left:3px solid var(--cyan);padding:12px 14px;background:#83e8e50a;border-radius:0 12px 12px 0;line-height:1.7}.library-item{padding:14px;border:1px solid #ffffff18;border-radius:13px;margin:9px 0;background:#ffffff08}.library-item h3{color:var(--gold);margin:0 0 7px;font:600 1rem "Noto Serif",serif}.library-item p{color:#ddd3e9;line-height:1.65;margin:0 0 10px}.tag{font-size:.7rem;color:var(--cyan);letter-spacing:1px;text-transform:uppercase}.progress{height:9px;border-radius:20px;background:#ffffff18;overflow:hidden;margin:10px 0}.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--gold));border-radius:20px;transition:width .3s}.modal{display:none;position:fixed;inset:0;z-index:20;background:#03020bd9;backdrop-filter:blur(8px);padding:18px;align-items:center;justify-content:center}.modal.show{display:flex}.modal-box{width:min(620px,100%);max-height:85vh;overflow:auto;background:linear-gradient(145deg,#21163b,#0d2636);border:1px solid var(--gold);border-radius:19px;padding:24px;box-shadow:0 0 45px #f6d87933;animation:rise .25s}.modal-box h2{font:700 1.35rem Cinzel,serif;color:var(--gold);margin:0 35px 15px 0}.modal-box p{line-height:1.8;color:#e8dfd0}.close{float:right;padding:5px 10px;border:0;background:transparent;font-size:1.5rem}.toast{position:fixed;bottom:18px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#172c43;border:1px solid var(--cyan);padding:12px 18px;border-radius:12px;z-index:40;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}footer{text-align:center;color:#a99fba;padding:35px 15px;font-size:.78rem;line-height:1.7}.divider{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin:16px 0}
+@media(max-width:760px){.half,.third{grid-column:span 12}.feature-grid{grid-template-columns:repeat(2,1fr)}header{padding-top:40px}.panel{padding:17px}.brand{letter-spacing:1px}}@media(max-width:420px){.feature-grid{grid-template-columns:1fr}.counter{flex-wrap:wrap}}
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: radial-gradient(circle at center, #1b0c2e 0%, #080310 100%);
-            color: #f3e5ab;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow-x: hidden;
-            padding: 20px;
-        }
+/* ULTRA 2026 expansion */
+.extra-nav{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.extra-card{background:linear-gradient(145deg,#ffffff0c,#83e8e508);border:1px solid #83e8e533;border-radius:15px;padding:15px}
+.extra-card h3{color:var(--cyan);font-size:.95rem;margin:0 0 8px}
+.checkline{display:flex;gap:9px;align-items:flex-start;padding:9px 0;border-bottom:1px solid #ffffff12;color:#e8dfd0}
+.checkline input{accent-color:#83e8e5;margin-top:4px}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+.stat-box{text-align:center;padding:13px 8px;border-radius:13px;background:#ffffff0a;border:1px solid #ffffff15}
+.stat-box strong{display:block;color:var(--gold);font:700 1.35rem Cinzel,serif}
+.timer-face{font:700 clamp(2rem,7vw,3.5rem) Cinzel,serif;text-align:center;color:var(--cyan);padding:15px;text-shadow:0 0 18px #83e8e566}
+@media(max-width:600px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
 
-        .container {
-            width: 100%;
-            max-width: 600px;
-            background: rgba(20, 10, 35, 0.85);
-            border: 2px solid #d4af37;
-            border-radius: 20px;
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.4), inset 0 0 15px rgba(212, 175, 55, 0.2);
-            padding: 30px 20px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-        }
 
-        /* Header / Tiêu đề */
-        .header h1 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.8rem;
-            color: #ffd700;
-            margin-bottom: 10px;
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
-            letter-spacing: 1px;
-        }
+/* ULTRA SUPREME 2027 */
+.supreme-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 16px}
+.supreme-output{white-space:pre-wrap;line-height:1.75;color:#f4e9d5}
+.mood-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.mood-btn{padding:12px 5px;font-size:.8rem}
+.mood-btn.active{border-color:var(--cyan);background:#17606a66}
+.path-list{display:grid;gap:10px}
+.path-step{padding:12px;border-left:3px solid var(--gold);background:#ffffff09;border-radius:0 12px 12px 0}
+@media(max-width:620px){.mood-grid{grid-template-columns:repeat(3,1fr)}}
 
-        .header p {
-            font-size: 0.95rem;
-            color: #e0d0b0;
-            line-height: 1.6;
-            margin-bottom: 25px;
-            background: rgba(255, 215, 0, 0.05);
-            padding: 15px;
-            border-radius: 10px;
-            border-left: 3px solid #d4af37;
-            border-right: 3px solid #d4af37;
-            text-align: justify;
-        }
-
-        /* Khu vực nút chức năng */
-        .btn-group {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        .spiritual-btn {
-            background: linear-gradient(135deg, #4a2800 0%, #2b1400 100%);
-            color: #ffd700;
-            border: 1px solid #d4af37;
-            padding: 14px 20px;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .spiritual-btn:hover {
-            background: linear-gradient(135deg, #6b3b00, #4a2800);
-            border-color: #fff;
-            color: #fff;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
-        }
-
-        .spiritual-btn.highlight {
-            background: linear-gradient(135deg, #b8860b, #daa520);
-            color: #1b0c2e;
-            font-weight: 750;
-            border: 1px solid #fff;
-        }
-
-        .spiritual-btn.highlight:hover {
-            background: linear-gradient(135deg, #daa520, #ffd700);
-            color: #080310;
-        }
-
-        /* Khu vực Trải Nghiệm Thẻ Thánh Đức */
-        .card-section {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px dashed #d4af37;
-            border-radius: 15px;
-            padding: 20px;
-            margin-top: 10px;
-        }
-
-        .card-section h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.2rem;
-            color: #ffd700;
-            margin-bottom: 10px;
-        }
-
-        .card-result {
-            margin-top: 15px;
-            font-style: italic;
-            color: #fff8dc;
-            font-size: 1rem;
-            min-height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 10px;
-        }
-
-        /* Modal / Hộp thoại thông tin */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            padding: 20px;
-            backdrop-filter: blur(5px);
-        }
-
-        .modal-content {
-            background: #180c29;
-            border: 2px solid #ffd700;
-            border-radius: 15px;
-            max-width: 500px;
-            width: 100%;
-            padding: 25px;
-            position: relative;
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
-            text-align: left;
-            animation: fadeIn 0.3s ease;
-        }
-
-        .modal-content h2 {
-            font-family: 'Cinzel', serif;
-            color: #ffd700;
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            text-align: center;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-            padding-bottom: 10px;
-        }
-
-        .modal-content p {
-            font-size: 0.95rem;
-            color: #e2d8c3;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            background: none;
-            border: none;
-            color: #ffd700;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
-        }
-    </style>
+</style>
 </head>
 <body>
+<header>
+  <div class="kicker">Ánh sáng từ bi · Trí tuệ · Tỉnh thức</div>
+  <h1 class="brand">THƯỢNG NGƯƠN THÁNH ĐỨC</h1>
+  <p class="subtitle">Không gian thực hành thiện lành – nuôi dưỡng lòng từ bi, rèn luyện chánh niệm và vun bồi đời sống đạo đức mỗi ngày.</p>
+</header>
+<main class="wrap">
+  <nav class="toolbar" aria-label="Điều hướng nhanh">
+    <a class="btn soft" href="#thu-vien">📚 Thư viện</a><a class="btn soft" href="#lich-tu-tap">🗓️ Lịch 365 ngày</a><a class="btn soft" href="#cong-cu">🙏 Công cụ tu tập</a><a class="btn soft" href="#nhat-ky">🪷 Nhật ký</a>
+    <button class="small" onclick="changeFont(1)">A+</button><button class="small" onclick="changeFont(-1)">A−</button><button class="small" onclick="toggleReading()">🌙 Chế độ đọc</button>
+  </nav>
 
-    <div class="container">
-        <!-- Tiêu đề & Đoạn văn bản mô tả cảnh Thượng Ngươn Thánh Đức -->
-        <div class="header">
-            <h1>THƯỢNG NGƠN THÁNH ĐỨC</h1>
-            <p>
-                Thời kỳ Thượng Ngươn Thánh Đức là kỷ nguyên hoàng kim của nhân loại, nơi ánh sáng chân lý và lòng bác ái ngự trị khắp chốn. Cảnh giới ấy thanh bình vô tận, vạn vật hòa hợp trong tình thương yêu thương vô lượng, không còn tranh chấp, khổ đau hay chiến tranh, con người sống đạo đức, thuần lương và hiệp nhất cùng vũ trụ.
-            </p>
-        </div>
+  <section class="grid">
+    <article class="panel">
+      <h2 class="section-title">✨ Bốn nội dung tâm linh</h2>
+      <p class="muted">Khám phá các chủ đề về cảnh giới Thượng Ngươn, đạo đức và hành trình chuyển hóa nội tâm.</p>
+      <div class="btnrow">
+        <button onclick="openModal('modalCanh')">✨ Cảnh Thượng Ngươn</button>
+        <button onclick="openModal('modalTieuChuan')">📜 Tiêu chuẩn tu dưỡng</button>
+        <button onclick="openModal('modalThoiGian')">⏳ Thời kỳ Thượng Ngươn</button>
+        <button class="primary" onclick="openModal('modalDiLac')">☸️ Phật Di Lặc giáng thế</button>
+      </div>
+    </article>
 
-        <!-- Các Nút Chức Năng Theo Yêu Cầu -->
-        <div class="btn-group">
-            <button class="spiritual-btn" onclick="openModal('modalCanh')">
-                ✨ Mô Tả Chi Tiết Về Cảnh Thượng Ngươn
-            </button>
-            <button class="spiritual-btn" onclick="openModal('modalTieuChuan')">
-                📜 Cách Để Đạt Tiêu Chuẩn Vào Thượng Ngươn
-            </button>
-            <button class="spiritual-btn" onclick="openModal('modalThoiGian')">
-                ⏳ Khi Nào Đến Ngày Thượng Ngươn Thánh Đức?
-            </button>
-            <!-- Nút mới thêm theo yêu cầu -->
-            <button class="spiritual-btn highlight" onclick="openModal('modalDiLac')">
-                ☸️ Phật Di Lặc Giáng Thế Độ Nhân
-            </button>
-        </div>
+    <article class="panel half">
+      <h2 class="section-title">🎴 Gieo quẻ / Rút thẻ Thánh Đức</h2>
+      <p class="muted">Một lời nhắc thiện lành để chiêm nghiệm trong ngày, không phải lời tiên đoán hay căn cứ quyết định tương lai.</p>
+      <button class="primary" style="width:100%" onclick="rutTheThanhDuc()">🙏 Rút thẻ hôm nay</button>
+      <div class="result" id="cardResult" style="margin-top:12px">“Hãy tĩnh tâm, thành kính và mở lòng đón nhận một lời nhắc thiện lành...”</div>
+    </article>
+    <article class="panel half">
+      <h2 class="section-title">🌟 Lời nhắc mỗi ngày</h2>
+      <div class="day-card" id="dailyQuote">Tâm an thì lời nói hiền hòa; lòng từ thì hành động trở nên lợi ích.</div>
+      <div class="divider"></div>
+      <p class="muted">Ngày thực hành: <b id="todayLabel"></b></p>
+      <div class="progress"><i id="dailyProgress"></i></div>
+      <small class="muted" id="progressText">Hoàn thành các thực hành nhỏ để vun bồi sự đều đặn.</small>
+    </article>
+  </section>
 
-        <!-- Khu Vực Trải Nghiệm Tâm Linh: Gieo Quẻ / Rút Thẻ -->
-        <div class="card-section">
-            <h3>🎴 Gieo Quẻ / Rút Thẻ Thánh Đức Hằng Ngày</h3>
-            <button class="spiritual-btn highlight" onclick="rutTheThanhDuc()" style="width: 100%; margin-top: 10px;">
-                🙏 Rút Thẻ Ngay
-            </button>
-            <div class="card-result" id="cardResult">
-                "Hãy tĩnh tâm, thành kính bấm nút để nhận thông điệp thiêng liêng hôm nay..."
-            </div>
-        </div>
-    </div>
+  <section class="grid" id="thu-vien">
+    <article class="panel">
+      <h2 class="section-title">📚 Thư viện kinh Phật & pháp thoại</h2>
+      <p class="muted">Một số trích đoạn giới thiệu và nội dung chiêm nghiệm ngắn. Có thể chọn đọc thành tiếng bằng giọng đọc có sẵn trên thiết bị/trình duyệt.</p>
+      <input class="field" id="searchLibrary" placeholder="Tìm kiếm kinh, chủ đề, pháp thoại..." oninput="renderLibrary()">
+      <div id="libraryList"></div>
+      <div class="btnrow"><button class="small" onclick="stopSpeech()">⏹ Dừng đọc</button><button class="small" onclick="speakCurrent()">🔊 Đọc nội dung đang chọn</button></div>
+      <p class="muted" style="font-size:.76rem;margin-top:10px">Lưu ý: chức năng đọc sử dụng giọng nói (Text-to-Speech) do thiết bị/trình duyệt cung cấp; không phải dịch vụ AI trực tuyến và chất lượng giọng tùy thiết bị.</p>
+    </article>
+  </section>
 
-    <!-- CÁC HỘP THOẠI MODAL HIỂN THỊ NỘI DUNG -->
+  <section class="grid" id="lich-tu-tap">
+    <article class="panel half">
+      <h2 class="section-title">🗓️ Lịch tu tập 365 ngày</h2>
+      <p class="muted">Chọn ngày trong năm để xem gợi ý thực hành. Nội dung là lịch gợi ý linh hoạt, không thay thế thời khóa của đạo tràng.</p>
+      <label class="muted" for="dayPicker">Chọn ngày thứ</label>
+      <input class="field" type="number" id="dayPicker" min="1" max="365" value="1" onchange="showPracticeDay()">
+      <div class="day-card" id="practiceDay" style="margin-top:12px"></div>
+      <div class="btnrow" style="margin-top:12px"><button class="primary" onclick="completePractice()">✓ Đánh dấu đã thực hành</button><button onclick="nextPracticeDay()">Ngày tiếp theo →</button></div>
+      <p class="muted" id="practiceStatus"></p>
+    </article>
+    <article class="panel half" id="cong-cu">
+      <h2 class="section-title">🙏 Bộ đếm tụng kinh & niệm Phật</h2>
+      <p class="muted">Bộ đếm cá nhân để ghi nhận thời khóa, không tự xác nhận công đức hay kết quả tâm linh.</p>
+      <div class="counter"><div><b>📿 Niệm Phật</b><br><small class="muted">Số lần đã niệm</small></div><span class="count" id="phatCount">0</span><div class="btnrow"><button class="small primary" onclick="increment('phatCount')">+1</button><button class="small" onclick="resetCounter('phatCount')">Đặt lại</button></div></div>
+      <div class="counter"><div><b>📖 Tụng kinh</b><br><small class="muted">Số phẩm / thời khóa</small></div><span class="count" id="sutraCount">0</span><div class="btnrow"><button class="small primary" onclick="increment('sutraCount')">+1</button><button class="small" onclick="resetCounter('sutraCount')">Đặt lại</button></div></div>
+      <div class="counter"><div><b>🕯️ Chú Đại Bi</b><br><small class="muted">Số biến đã trì tụng</small></div><span class="count" id="dabiCount">0</span><div class="btnrow"><button class="small primary" onclick="increment('dabiCount')">+1</button><button class="small" onclick="resetCounter('dabiCount')">Đặt lại</button></div></div>
+      <div class="counter"><div><b>🌼 Chú Vãng Sanh</b><br><small class="muted">Số biến đã trì tụng</small></div><span class="count" id="vangsanhCount">0</span><div class="btnrow"><button class="small primary" onclick="increment('vangsanhCount')">+1</button><button class="small" onclick="resetCounter('vangsanhCount')">Đặt lại</button></div></div>
+    </article>
+  </section>
 
-    <!-- Modal 1: Mô tả cảnh Thượng Ngươn Thánh Đức -->
-    <div class="modal" id="modalCanh">
-        <div class="modal-content">
-            <button class="close-btn" onclick="closeModal('modalCanh')">&times;</button>
-            <h2>Cảnh Thượng Ngươn Thánh Đức</h2>
-            <p>• <strong>Môi trường thiên nhiên:</strong> Khí hậu ôn hòa, đất trời trong lành, cây trái xanh tươi quanh năm, chim muông hòa ca, không còn thiên tai hay dịch bệnh khắc nghiệt.</p>
-            <p>• <strong>Đời sống xã hội:</strong> Nhân loại sống chung một mái nhà đại đồng. Không phân biệt tôn giáo, chủng tộc hay ranh giới quốc gia. Mọi người đối xử với nhau bằng lòng chân thành và bác ái.</p>
-            <p>• <strong>Đời sống tâm linh:</strong> Con người thấu suốt lý vô thường, hướng thượng, tu tâm dưỡng tính, tôn trọng sự sống của muôn loài và sống thuận theo Thiên lý.</p>
-        </div>
-    </div>
+  <section class="grid">
+    <article class="panel half">
+      <h2 class="section-title">🪷 Hệ thống Đại Nguyện</h2>
+      <p class="muted">Ghi lại những nguyện lành cụ thể để nhắc mình sống từ bi, chân thật và có trách nhiệm.</p>
+      <div class="stack"><input class="field" id="vowInput" placeholder="Ví dụ: Mỗi ngày nói một lời ái ngữ..."><button class="primary" onclick="addVow()">+ Lập nguyện lành</button><div id="vowList"></div></div>
+    </article>
+    <article class="panel half" id="nhat-ky">
+      <h2 class="section-title">📝 Nhật ký công đức & hồi hướng</h2>
+      <p class="muted">Ghi lại việc thiện đã làm và lời hồi hướng với tâm khiêm cung, không dùng để so sánh hay đánh giá người khác.</p>
+      <div class="stack"><input class="field" id="meritTitle" placeholder="Việc thiện / điều biết ơn hôm nay"><textarea class="field" id="dedication" placeholder="Lời hồi hướng hoặc tâm nguyện..."></textarea><button class="primary" onclick="saveJournal()">💛 Lưu nhật ký</button><div id="journalList"></div></div>
+    </article>
+  </section>
 
-    <!-- Modal 2: Tiêu chuẩn vào Thượng Ngươn -->
-    <div class="modal" id="modalTieuChuan">
-        <div class="modal-content">
-            <button class="close-btn" onclick="closeModal('modalTieuChuan')">&times;</button>
-            <h2>Tiêu Chuẩn Vào Thượng Ngươn</h2>
-            <p>Để đủ phẩm chất bước sang kỷ nguyên mới, mỗi cá nhân cần rèn luyện:</p>
-            <p>1. <strong>Hành thiện tích đức:</strong> Luôn làm việc lành, lánh xa điều ác, từ bỏ tham, sân, si.</p>
-            <p>2. <strong>Giữ tâm trong sạch:</strong> Tu dưỡng đạo đức cá nhân, hiếu thảo với cha mẹ, hòa thuận với xóm làng.</p>
-            <p>3. <strong>Thực hành ăn chay, niệm Phật/cầu nguyện:</strong> Giảm thiểu sát sinh, nuôi dưỡng lòng từ bi đối với muôn loài vật chất.</p>
-            <p>4. <strong>Chuyển hóa nghiệp lực:</strong> Biết ăn năng sám hối lỗi lầm cũ, buông bỏ chấp niệm và hướng về ánh sáng chân lý.</p>
-        </div>
-    </div>
+  <section class="grid">
+    <article class="panel">
+      <h2 class="section-title">🌈 18 tính năng tâm linh mới</h2>
+      <div class="feature-grid" id="featureGrid"></div>
+      <div class="divider"></div>
+      <h3 class="section-title">🧰 Sao lưu dữ liệu cá nhân</h3>
+      <p class="muted">Dữ liệu tu tập, bộ đếm, nguyện lành và nhật ký được lưu trên trình duyệt hiện tại. Hãy xuất bản sao lưu khi cần chuyển thiết bị.</p>
+      <div class="btnrow"><button onclick="exportData()">⬇ Xuất dữ liệu JSON</button><label class="btn" for="importFile">⬆ Nhập dữ liệu</label><input id="importFile" type="file" accept="application/json" hidden onchange="importData(event)"><button class="danger" onclick="clearLocalData()">Xóa dữ liệu trên thiết bị</button></div>
+    </article>
+  </section>
+</main>
 
-    <!-- Modal 3: Thời gian đến Thượng Ngươn -->
-    <div class="modal" id="modalThoiGian">
-        <div class="modal-content">
-            <button class="close-btn" onclick="closeModal('modalThoiGian')">&times;</button>
-            <h2>Thời Gian Thượng Ngươn Thánh Đức</h2>
-            <p>Theo triết lý chu kỳ vũ trụ (Vòng xoay Hạ ngươn kết thúc để mở ra chu kỳ mới):</p>
-            <p>• Thời gian không cố định theo một con số lịch năm vật lý thuần túy, mà ứng với <strong>sự chuyển hóa tâm thức của nhân loại</strong>.</p>
-            <p>• Khi phần đông nhân loại thức tỉnh, từ bỏ chiến tranh và cái ác để quay về với đạo đức lương tâm, thì đó chính là thời khắc Thượng Ngươn hiện tiền trên Trái Đất.</p>
-        </div>
-    </div>
+<section class="grid" id="supreme2027">
+ <article class="panel">
+  <h2 class="section-title">👑 ULTRA SUPREME 2027 – Trung tâm điều hành tâm linh</h2>
+  <p class="muted">Bản mở rộng gồm công cụ tự thực hành, quản lý nhóm và lưu trữ cá nhân. Các mục cộng đồng/đồng bộ hiện là bản mẫu chạy trên thiết bị; muốn dùng nhiều người hoặc nhiều thiết bị cần máy chủ và tài khoản riêng.</p>
+  <div class="supreme-tabs">
+   <a class="btn small" href="#mood">Nhật ký cảm xúc</a><a class="btn small" href="#community">Cộng đồng</a><a class="btn small" href="#library-plus">Kệ sách</a><a class="btn small" href="#ai-assistant">Trợ lý Phật học</a><a class="btn small" href="#privacy-cloud">Riêng tư & sao lưu</a>
+  </div>
+ </article>
+ <article class="panel half" id="mood">
+  <h2 class="section-title">💗 Nhật ký cảm xúc</h2>
+  <p class="muted">Chọn trạng thái gần với cảm nhận hiện tại và ghi chú nếu muốn. Không phải công cụ chẩn đoán.</p>
+  <div class="mood-grid" id="moodChoices">
+   <button class="mood-btn" data-mood="An yên" onclick="selectMood(this)">😌<br>An yên</button>
+   <button class="mood-btn" data-mood="Vui vẻ" onclick="selectMood(this)">😊<br>Vui vẻ</button>
+   <button class="mood-btn" data-mood="Biết ơn" onclick="selectMood(this)">🙏<br>Biết ơn</button>
+   <button class="mood-btn" data-mood="Lo lắng" onclick="selectMood(this)">😟<br>Lo lắng</button>
+   <button class="mood-btn" data-mood="Mệt mỏi" onclick="selectMood(this)">😴<br>Mệt mỏi</button>
+  </div>
+  <textarea class="field" id="moodNote" placeholder="Điều gì đang diễn ra trong lòng bạn?"></textarea>
+  <button class="primary" style="margin-top:9px" onclick="saveMood()">Lưu nhật ký cảm xúc</button>
+  <div id="moodHistory"></div>
+ </article>
+ <article class="panel half">
+  <h2 class="section-title">🌳 Vườn công đức</h2>
+  <p class="muted">Mỗi việc thiện được ghi nhận là một biểu tượng nhắc nhớ sự thực hành. Không quy đổi thành điểm số giá trị con người.</p>
+  <div class="stat-grid"><div class="stat-box"><strong id="goodDeedsCount">0</strong><small class="muted">Việc thiện</small></div><div class="stat-box"><strong id="gardenTrees">0</strong><small class="muted">Mầm lành</small></div></div>
+  <input class="field" id="deedInput" placeholder="Ví dụ: giúp đỡ người cần hỗ trợ...">
+  <button class="primary" style="margin-top:9px" onclick="addGoodDeed()">🌱 Gieo một hạt lành</button>
+  <div id="deedList"></div>
+ </article>
+ <article class="panel half" id="community">
+  <h2 class="section-title">🤝 Việc thiện cộng đồng</h2>
+  <input class="field" id="communityTitle" placeholder="Tên hoạt động thiện nguyện">
+  <textarea class="field" id="communityDetail" placeholder="Mục tiêu, thời gian, cách tham gia..."></textarea>
+  <button class="primary" style="margin-top:9px" onclick="addCommunity()">Thêm hoạt động</button>
+  <div id="communityList"></div>
+  <div class="divider"></div>
+  <h3 class="section-title">🧑‍🤝‍🧑 Nhóm tu học – sổ sinh hoạt</h3>
+  <input class="field" id="groupName" placeholder="Tên nhóm / đạo tràng">
+  <input class="field" id="groupActivity" placeholder="Nội dung sinh hoạt / thời khóa">
+  <button class="small" style="margin-top:8px" onclick="addGroupRecord()">Lưu ghi chú nhóm</button>
+  <div id="groupList"></div>
+ </article>
+ <article class="panel half">
+  <h2 class="section-title">🧘 Thư giãn cơ thể</h2>
+  <p class="muted">Bài hướng dẫn nhẹ nhàng, có thể dừng bất cứ lúc nào. Không thực hiện động tác gây đau.</p>
+  <div class="result" id="relaxText">Ngồi hoặc nằm ở tư thế dễ chịu. Thả lỏng vai và hàm, cảm nhận điểm tiếp xúc của cơ thể với ghế hoặc mặt sàn.</div>
+  <div class="btnrow" style="margin-top:10px"><button class="primary" onclick="nextRelax()">Bước tiếp theo</button><button onclick="resetRelax()">Bắt đầu lại</button></div>
+ </article>
+ <article class="panel half" id="library-plus">
+  <h2 class="section-title">📚 Kệ sách cá nhân & bộ sưu tập chủ đề</h2>
+  <select class="field" id="collectionTopic"><option>Chánh niệm</option><option>Từ bi</option><option>Trí tuệ</option><option>Hiếu đạo</option><option>Thiện nguyện</option><option>Thiền tập</option></select>
+  <input class="field" id="collectionTitle" placeholder="Tên sách / bài đọc / đường dẫn tham khảo">
+  <button class="primary" style="margin-top:9px" onclick="addCollection()">Thêm vào kệ sách</button>
+  <div id="collectionList"></div>
+ </article>
+ <article class="panel half">
+  <h2 class="section-title">🕊️ Lời chúc an lành</h2>
+  <div class="result" id="blessingText">Nguyện cho bạn thân tâm an ổn, gặp nhiều duyên lành và có đủ sáng suốt để bước qua những khó khăn.</div>
+  <div class="btnrow" style="margin-top:10px"><button class="primary" onclick="newBlessing()">Tạo lời chúc</button><button onclick="copyBlessing()">Sao chép</button></div>
+ </article>
+ <article class="panel half">
+  <h2 class="section-title">🗓️ Báo cáo tu tập tháng</h2>
+  <label class="muted">Chọn tháng</label><input class="field" type="month" id="reportMonth" onchange="renderMonthlyReport()">
+  <div id="monthlyReport" class="result" style="margin-top:10px">Chọn tháng để xem tổng kết từ dữ liệu đang lưu.</div>
+  <button class="small" style="margin-top:9px" onclick="printPractice()">🖨️ In thời khóa / báo cáo</button>
+ </article>
+ <article class="panel half">
+  <h2 class="section-title">🏅 Thử thách 7 ngày & 21 ngày</h2>
+  <p class="muted">Chọn thử thách để theo dõi từng ngày. Hãy đặt mục tiêu vừa sức và linh hoạt khi cần nghỉ.</p>
+  <div class="btnrow"><button class="primary" onclick="startChallenge(7)">Bắt đầu 7 ngày</button><button onclick="startChallenge(21)">Bắt đầu 21 ngày</button></div>
+  <div id="challengePanel" class="result" style="margin-top:10px"></div>
+ </article>
+ <article class="panel half">
+  <h2 class="section-title">❓ Câu hỏi tự quán</h2>
+  <div class="result" id="reflectionQuestion">Hôm nay mình có thể làm điều gì nhỏ bé để giảm bớt khổ đau cho một người?</div>
+  <button class="primary" style="margin-top:9px" onclick="newReflection()">Câu hỏi tiếp theo</button>
+ </article>
+ <article class="panel half">
+  <h2 class="section-title">🎙️ Ghi âm suy ngẫm</h2>
+  <p class="muted">Ghi âm bằng microphone của thiết bị nếu trình duyệt hỗ trợ. Trình duyệt có thể yêu cầu cấp quyền.</p>
+  <div class="btnrow"><button class="primary" onclick="startRecording()">● Bắt đầu ghi</button><button onclick="stopRecording()">Dừng ghi</button></div>
+  <p class="muted" id="recordStatus">Chưa ghi âm.</p><audio id="recordPlayback" controls style="width:100%;display:none"></audio>
+ </article>
+ <article class="panel half">
+  <h2 class="section-title">🤖 Trợ lý Phật học</h2>
+  <p class="muted">Trợ lý tra cứu nội dung tham khảo được tích hợp sẵn, không phải mô hình AI trực tuyến và không thay thế giáo thọ hoặc kinh sách gốc.</p>
+  <input class="field" id="assistantQuestion" placeholder="Hỏi về từ bi, chánh niệm, vô thường...">
+  <button class="primary" style="margin-top:9px" onclick="askBuddhistAssistant()">Gửi câu hỏi</button>
+  <div id="assistantAnswer" class="result" style="margin-top:10px">Xin chào. Bạn có thể hỏi về các chủ đề tu học căn bản.</div>
+ </article>
+ <article class="panel half">
+  <h2 class="section-title">🗺️ Bản đồ hành trình tu tập</h2>
+  <div class="path-list" id="journeyMap">
+   <div class="path-step"><b>1. Phát tâm</b><br><small class="muted">Xác định một ý nguyện thiện lành.</small></div>
+   <div class="path-step"><b>2. Thực hành</b><br><small class="muted">Duy trì thời khóa phù hợp với đời sống.</small></div>
+   <div class="path-step"><b>3. Quán chiếu</b><br><small class="muted">Nhìn lại thân, lời nói và tâm ý.</small></div>
+   <div class="path-step"><b>4. Chia sẻ</b><br><small class="muted">Đem hiểu biết và lòng tốt vào đời sống.</small></div>
+   <div class="path-step"><b>5. Tiếp tục</b><br><small class="muted">Kiên nhẫn, khiêm cung và học hỏi.</small></div>
+  </div>
+ </article>
+ <article class="panel" id="privacy-cloud">
+  <h2 class="section-title">🔐 Riêng tư, chia sẻ & đồng bộ</h2>
+  <div class="grid">
+   <div class="panel half" style="margin:0">
+    <h3 class="section-title">Khóa riêng tư giao diện</h3>
+    <p class="muted">Khóa màn hình trong phiên sử dụng bằng mã PIN. Đây không phải mã hóa dữ liệu lưu trữ.</p>
+    <input class="field" id="privacyPin" type="password" inputmode="numeric" maxlength="8" placeholder="Tạo mã PIN (4–8 số)">
+    <button class="small primary" style="margin-top:8px" onclick="setPrivacyPin()">Thiết lập / cập nhật PIN</button>
+    <button class="small" onclick="lockApp()">Khóa ngay</button>
+    <button class="small" onclick="unlockApp()">Mở khóa</button>
+    <p class="muted" id="privacyStatus">Chưa khóa giao diện.</p>
+   </div>
+   <div class="panel half" style="margin:0">
+    <h3 class="section-title">Chia sẻ nhật ký</h3>
+    <p class="muted">Tạo bản văn bản để bạn tự xem lại hoặc gửi đi. Hãy kiểm tra và xóa thông tin riêng tư trước khi chia sẻ.</p>
+    <button class="small primary" onclick="shareJournal()">Chia sẻ / xuất nhật ký</button>
+    <button class="small" onclick="syncExport()">Tạo gói sao lưu đồng bộ</button>
+    <p class="muted" id="syncStatus">Chưa kết nối dịch vụ đám mây.</p>
+   </div>
+  </div>
+  <h3 class="section-title">🎨 Giao diện & ngôn ngữ</h3>
+  <div class="btnrow">
+   <select class="field" id="languageChoice" style="max-width:180px" onchange="changeLanguage()"><option value="vi">Tiếng Việt</option><option value="en">English (beta)</option></select>
+   <button onclick="setTheme('purple')">Tím thiên giới</button><button onclick="setTheme('blue')">Lam ngọc</button><button onclick="setTheme('dark')">Đêm tĩnh lặng</button>
+  </div>
+  <p class="muted" id="languageNote">Một số nhãn giao diện sẽ đổi ngôn ngữ; nội dung thư viện hiện chủ yếu bằng tiếng Việt.</p>
+ </article>
+</section>
+<div class="modal" id="privacyOverlay"><div class="modal-box"><h2>🔒 Giao diện đang khóa</h2><p>Nhập mã PIN đã thiết lập trên thiết bị này.</p><input class="field" id="unlockPin" type="password" inputmode="numeric" maxlength="8" placeholder="Mã PIN"><button class="primary" style="margin-top:10px" onclick="unlockApp(true)">Mở khóa</button><p id="unlockError" class="muted"></p></div></div>
 
-    <!-- Modal 4: Phật Di Lặc giáng thế độ nhân (Mới thêm) -->
-    <div class="modal" id="modalDiLac">
-        <div class="modal-content">
-            <button class="close-btn" onclick="closeModal('modalDiLac')">&times;</button>
-            <h2>Phật Di Lặc Giáng Thế Độ Nhân</h2>
-            <p>Khi Đức Phật Di Lặc ra đời giáng thế để cứu độ chúng sanh trong kỷ nguyên mới, con đường Ngài lựa chọn gắn liền với duyên độ sanh của nhân loại:</p>
-            <p>🌟 <strong>Nếu đi tu:</strong> Ngài sẽ chuyển hóa tâm thức chúng sanh, dìu dắt nhân loại vào con đường giác ngộ giải thoát, trở thành <strong>Phật Vạn Thế</strong> được vạn loại tri ân, tôn kính đời đời.</p>
-            <p>👑 <strong>Còn nếu không đi tu (xuất gia):</strong> Ngài sẽ đảm nhận vai trò trị vì thế gian bằng chính pháp, đem lại thái bình thịnh vượng, trở thành <strong>Thánh Đức Chuyển Luân Thánh Vương</strong> cai quản cõi Đại Đồng.</p>
-        </div>
-    </div>
 
-    <!-- JavaScript Xử Lý Tương Tác -->
-    <script>
-        // Danh sách Thẻ Thánh Đức hàng ngày
-        const danhSachThe = [
-            "✨ Thẻ số 1: 'Hôm nay hãy mở rộng lòng khoan dung, tha thứ cho lỗi lầm của người khác để tâm hồn được nhẹ nhàng, thanh tịnh.'",
-            "✨ Thẻ số 2: 'Gieo một hạt giống thiện lành bằng lời nói ái ngữ sẽ mang lại phước báu vô lượng cho chính bạn.'",
-            "✨ Thẻ số 3: 'Sống chậm lại để lắng nghe tiếng nói bên trong nội tâm, hướng về ánh sáng từ bi cao cả.'",
-            "✨ Thẻ số 4: 'Lòng biết ơn là cội nguồn của mọi phước đức. Hãy tri ân đất trời, cha mẹ và vạn vật quanh ta.'",
-            "✨ Thẻ số 5: 'Giữ tâm bất biến giữa dòng đời vạn biến, vững vàng trên con đường tu dưỡng đạo đức.'",
-            "✨ Thẻ số 6: 'Mỗi hành động giúp đỡ người khó khăn hôm nay là một bước tiến đưa bạn đến gần hơn cảnh giới Thượng Ngươn.'"
-        ];
+<section class="grid" id="tien-ich-mo-rong">
+ <article class="panel">
+  <h2 class="section-title">🚀 Trung tâm tiện ích tu tập – Ultra 2026</h2>
+  <p class="muted">Bổ sung công cụ thực hành, tự quan sát và quản lý thời khóa. Các công cụ hoạt động ngay trên trình duyệt, không cần đăng nhập.</p>
+  <div class="stat-grid">
+   <div class="stat-box"><strong id="statDays">0</strong><small class="muted">Ngày tu tập</small></div>
+   <div class="stat-box"><strong id="statVows">0</strong><small class="muted">Đại nguyện</small></div>
+   <div class="stat-box"><strong id="statJournal">0</strong><small class="muted">Nhật ký</small></div>
+   <div class="stat-box"><strong id="statCounts">0</strong><small class="muted">Lượt ghi nhận</small></div>
+  </div>
+ </article>
+ <article class="panel half">
+  <h2 class="section-title">⏱️ Đồng hồ tĩnh tâm</h2>
+  <p class="muted">Chọn khoảng thời gian yên lặng, theo dõi hơi thở tự nhiên và kết thúc khi chuông báo.</p>
+  <div class="timer-face" id="meditationClock">05:00</div>
+  <div class="btnrow">
+   <select class="field" id="timerMinutes" style="max-width:150px" onchange="setMeditationTime()"><option value="3">3 phút</option><option value="5" selected>5 phút</option><option value="10">10 phút</option><option value="15">15 phút</option><option value="20">20 phút</option></select>
+   <button class="primary" onclick="startMeditation()">▶ Bắt đầu</button><button onclick="pauseMeditation()">Tạm dừng</button><button onclick="resetMeditation()">Đặt lại</button>
+  </div>
+  <p class="muted" id="timerMessage">Ngồi thoải mái, thả lỏng và không ép buộc hơi thở.</p>
+ </article>
+ <article class="panel half">
+  <h2 class="section-title">🌬️ Bài tập thở chánh niệm</h2>
+  <div class="result" id="breathGuide">Chuẩn bị nhẹ nhàng. Khi sẵn sàng, bắt đầu theo nhịp hướng dẫn.</div>
+  <div class="btnrow" style="margin-top:12px"><button class="primary" onclick="startBreathing()">Bắt đầu 1 phút</button><button onclick="stopBreathing()">Kết thúc</button></div>
+  <p class="muted">Chỉ thở tự nhiên, không nín thở hoặc cố kéo dài nhịp. Dừng lại nếu thấy khó chịu.</p>
+ </article>
+ <article class="panel half">
+  <h2 class="section-title">☀️ Thời khóa sáng – tối</h2>
+  <div class="extra-card"><h3>Buổi sáng</h3><label class="checkline"><input type="checkbox" class="routineCheck"> Uống nước và khởi đầu tỉnh thức</label><label class="checkline"><input type="checkbox" class="routineCheck"> Ngồi yên / theo dõi hơi thở</label><label class="checkline"><input type="checkbox" class="routineCheck"> Đọc kinh hoặc lời nhắc thiện lành</label></div>
+  <div class="extra-card" style="margin-top:10px"><h3>Buổi tối</h3><label class="checkline"><input type="checkbox" class="routineCheck"> Nhìn lại lời nói và hành động trong ngày</label><label class="checkline"><input type="checkbox" class="routineCheck"> Ghi một điều biết ơn</label><label class="checkline"><input type="checkbox" class="routineCheck"> Hồi hướng và nghỉ ngơi</label></div>
+  <button class="small" style="margin-top:10px" onclick="resetRoutine()">Đặt lại checklist</button>
+ </article>
+ <article class="panel half">
+  <h2 class="section-title">💛 Sổ tay biết ơn</h2>
+  <textarea class="field" id="gratitudeInput" placeholder="Hôm nay tôi biết ơn điều gì?"></textarea>
+  <button class="primary" style="margin-top:9px" onclick="saveGratitude()">Lưu điều biết ơn</button>
+  <div id="gratitudeList"></div>
+ </article>
+ <article class="panel half">
+  <h2 class="section-title">📌 Nội dung yêu thích</h2>
+  <p class="muted">Ghim nhanh một bài đọc hoặc lời nhắc muốn xem lại.</p>
+  <input class="field" id="bookmarkInput" placeholder="Tên bài / nội dung muốn lưu">
+  <button class="primary" style="margin-top:9px" onclick="addBookmark()">+ Ghim nội dung</button>
+  <div id="bookmarkList"></div>
+ </article>
+ <article class="panel">
+  <h2 class="section-title">💡 Gợi ý 24 tính năng mở rộng tiếp theo</h2>
+  <div class="feature-grid" id="futureIdeas"></div>
+ </article>
+</section>
 
-        function rutTheThanhDuc() {
-            const resultBox = document.getElementById("cardResult");
-            resultBox.style.opacity = 0;
-            
-            setTimeout(() => {
-                const randomIndex = Math.floor(Math.random() * danhSachThe.length);
-                resultBox.innerText = danhSachThe[randomIndex];
-                resultBox.style.opacity = 1;
-            }, 200);
-        }
+<footer>THƯỢNG NGƯƠN THÁNH ĐỨC · PHIÊN BẢN GIAO DIỆN 2026<br>Nuôi dưỡng lòng từ – thực hành điều thiện – sống tỉnh thức mỗi ngày.<br><span>Thông tin mang tính tham khảo và chiêm nghiệm; tôn trọng sự đa dạng trong truyền thống tu học.</span></footer>
 
-        // Điều khiển mở Modal
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = "flex";
-        }
+<div class="modal" id="modalCanh" onclick="backdropClose(event,'modalCanh')"><div class="modal-box"><button class="close" onclick="closeModal('modalCanh')">×</button><h2>Cảnh Thượng Ngươn Thánh Đức</h2><p><b>Môi trường thiên nhiên:</b> Hình dung một thế giới trong lành, cây trái xanh tươi, con người biết bảo vệ sự sống và sống hài hòa với thiên nhiên.</p><p><b>Đời sống xã hội:</b> Mọi người đối xử với nhau bằng chân thành, tôn trọng khác biệt, giúp đỡ người yếu thế và cùng xây dựng cộng đồng an lành.</p><p><b>Đời sống tâm linh:</b> Mỗi người tu dưỡng đạo đức, quán chiếu vô thường, nuôi dưỡng từ bi và trí tuệ.</p></div></div>
+<div class="modal" id="modalTieuChuan" onclick="backdropClose(event,'modalTieuChuan')"><div class="modal-box"><button class="close" onclick="closeModal('modalTieuChuan')">×</button><h2>Tiêu Chuẩn Tu Dưỡng</h2><p>1. <b>Hành thiện tích đức:</b> Làm việc lành, tránh gây tổn hại bằng thân, lời nói và ý nghĩ.</p><p>2. <b>Giữ tâm trong sạch:</b> Rèn luyện sự chân thật, hiếu kính, hòa thuận và trách nhiệm.</p><p>3. <b>Thực hành chánh niệm:</b> Ăn uống tỉnh thức, giảm sát hại, nuôi dưỡng lòng từ bi.</p><p>4. <b>Chuyển hóa bản thân:</b> Nhận lỗi, sám hối, sửa đổi và buông bỏ những chấp trước gây khổ.</p></div></div>
+<div class="modal" id="modalThoiGian" onclick="backdropClose(event,'modalThoiGian')"><div class="modal-box"><button class="close" onclick="closeModal('modalThoiGian')">×</button><h2>Thời Gian Thượng Ngươn Thánh Đức</h2><p>Trong nội dung chiêm nghiệm này, thời điểm Thượng Ngươn không được xác định bằng một ngày tháng cụ thể.</p><p>Đó là hình ảnh biểu trưng cho sự chuyển hóa tâm thức: khi con người biết giảm tranh chấp, nuôi dưỡng đạo đức, từ bi và trí tuệ thì những phẩm chất ấy có thể hiện diện ngay trong đời sống hôm nay.</p><p>Không có cơ sở để xem đây là dự báo chắc chắn về một mốc thời gian tương lai.</p></div></div>
+<div class="modal" id="modalDiLac" onclick="backdropClose(event,'modalDiLac')"><div class="modal-box"><button class="close" onclick="closeModal('modalDiLac')">×</button><h2>Phật Di Lặc Giáng Thế Độ Nhân</h2><p>Trong truyền thống Phật giáo, Đức Phật Di Lặc được nhắc đến là vị Phật sẽ xuất hiện trong tương lai, tiếp nối con đường giác ngộ và giáo hóa chúng sinh.</p><p>Nội dung về Ngài có thể được chiêm nghiệm qua tinh thần hoan hỷ, bao dung, bố thí, giữ giới và vun bồi trí tuệ.</p><p>Các diễn giải về vai trò và thời điểm trong những truyền thống khác nhau có thể không giống nhau; nên tiếp nhận với tinh thần tìm hiểu và tôn trọng.</p></div></div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const $=id=>document.getElementById(id);
+const storageKey='thuongnguyen2026';
+const defaultData={counters:{phatCount:0,sutraCount:0,dabiCount:0,vangsanhCount:0},vows:[],journal:[],completed:[],settings:{font:16}};
+let data=loadData(),currentText='';
+function loadData(){try{return {...defaultData,...JSON.parse(localStorage.getItem(storageKey)||'{}')}}catch(e){return structuredClone(defaultData)}}
+function saveData(){localStorage.setItem(storageKey,JSON.stringify(data));}
+function toast(msg){$('toast').textContent=msg;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),2300)}
+function openModal(id){$(id).classList.add('show');document.body.style.overflow='hidden'}
+function closeModal(id){$(id).classList.remove('show');document.body.style.overflow=''}
+function backdropClose(e,id){if(e.target.id===id)closeModal(id)}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelectorAll('.modal.show').forEach(m=>closeModal(m.id))}});
+const cards=['Hãy thực tập lắng nghe sâu, không vội phán xét người khác.','Một lời nói hiền hòa có thể làm dịu đi một ngày nhiều khó khăn.','Biết đủ và biết ơn giúp tâm bớt chạy theo hơn thua.','Hôm nay hãy làm một việc thiện nhỏ mà không mong cầu đáp trả.','Khi nóng giận khởi lên, hãy dừng lại và thở chậm ba lần.','Tôn trọng sự sống và chăm sóc môi trường cũng là thực tập từ bi.','Hãy chân thật với mình, dịu dàng với người và kiên nhẫn trong tu tập.','Tha thứ không có nghĩa là dung túng điều sai; đó là buông bớt oán hận.'];
+function rutTheThanhDuc(){$('cardResult').textContent='✨ '+cards[Math.floor(Math.random()*cards.length)];}
+const library=[
+{title:'Kinh Pháp Cú – lời nhắc về tâm',tag:'Kinh điển · Chiêm nghiệm',text:'Tâm dẫn đầu các pháp. Khi tâm trong sáng, lời nói và hành động thiện lành sẽ đem lại an vui. Hãy quan sát tâm mình trong từng việc nhỏ của đời sống.'},
+{title:'Kinh Từ Bi – nuôi dưỡng lòng thương',tag:'Từ bi · Thực hành',text:'Nguyện cho tất cả chúng sinh được an vui, không oán thù, không khổ não. Hãy bắt đầu bằng một thái độ hiền hòa với chính mình và những người đang ở gần.'},
+{title:'Pháp thoại ngắn – Chánh niệm trong đời thường',tag:'Pháp thoại · Chánh niệm',text:'Chánh niệm không chỉ có trong thời khóa ngồi yên. Ta có thể thực tập khi đi, đứng, ăn, nói và làm việc. Biết rõ điều đang diễn ra giúp ta lựa chọn hành động sáng suốt hơn.'},
+{title:'Pháp thoại ngắn – Biết ơn và sẻ chia',tag:'Pháp thoại · Đời sống',text:'Lòng biết ơn nhắc ta nhận ra sự nâng đỡ của nhiều người và điều kiện quanh mình. Từ sự biết ơn, ta có thể sống trách nhiệm hơn và chia sẻ khả năng của mình.'},
+{title:'Quán chiếu vô thường',tag:'Tuệ giác · Quán chiếu',text:'Mọi sự vật đều đổi thay. Nhận biết vô thường không phải để bi quan, mà để trân quý hiện tại, bớt cố chấp và sống có ý nghĩa hơn.'}
+];
+function renderLibrary(){let q=$('searchLibrary').value.toLowerCase();$('libraryList').innerHTML=library.filter(x=>(x.title+x.tag+x.text).toLowerCase().includes(q)).map((x,i)=>`<div class="library-item"><span class="tag">${x.tag}</span><h3>${x.title}</h3><p>${x.text}</p><button class="small primary" onclick="readItem(${library.indexOf(x)})">🔊 Nghe bài này</button> <button class="small" onclick="selectItem(${library.indexOf(x)})">Chọn nội dung</button></div>`).join('')||'<p class="muted">Không tìm thấy nội dung phù hợp.</p>'}
+function selectItem(i){currentText=library[i].title+'. '+library[i].text;toast('Đã chọn nội dung đọc')}
+function readItem(i){selectItem(i);speakCurrent()}
+function speakCurrent(){if(!currentText){toast('Hãy chọn một bài viết trước');return}if(!('speechSynthesis'in window)){toast('Trình duyệt chưa hỗ trợ đọc thành tiếng');return}speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(currentText);u.lang='vi-VN';u.rate=.92;let voices=speechSynthesis.getVoices();let v=voices.find(x=>x.lang.toLowerCase().startsWith('vi'));if(v)u.voice=v;speechSynthesis.speak(u)}
+function stopSpeech(){if('speechSynthesis'in window)speechSynthesis.cancel();toast('Đã dừng đọc')}
+function changeFont(d){let f=Math.max(13,Math.min(22,(data.settings.font||16)+d));data.settings.font=f;document.documentElement.style.fontSize=f+'px';saveData()}
+function toggleReading(){document.body.classList.toggle('reading');document.body.style.background=document.body.classList.contains('reading')?'#171421':'';document.querySelectorAll('.panel').forEach(p=>p.style.background=document.body.classList.contains('reading')?'#211e2a':'');}
+const practices=['Dành 5 phút theo dõi hơi thở, nhận biết thân tâm.','Đọc một đoạn kinh ngắn và ghi lại điều tâm đắc.','Thực tập nói lời chân thật, hòa ái và đúng lúc.','Làm một việc giúp đỡ người khác trong khả năng.','Quán chiếu điều khiến mình nóng giận và tìm cách chuyển hóa.','Dành thời gian chăm sóc cây xanh hoặc giữ gìn môi trường.','Thực tập biết ơn ba điều nhỏ trong ngày hôm nay.','Giữ chánh niệm trong một bữa ăn, ăn chậm và trân trọng.','Gọi hỏi thăm người thân bằng sự lắng nghe chân thành.','Hồi hướng điều lành và phát nguyện tiếp tục sửa mình.'];
+function showPracticeDay(){let n=Math.max(1,Math.min(365,Number($('dayPicker').value)||1));$('dayPicker').value=n;$('practiceDay').innerHTML=`<b>Ngày ${n}/365</b><br>${practices[(n-1)%practices.length]}<br><small>Gợi ý: thực hành tùy sức, đều đặn và không ép buộc bản thân.</small>`;$('practiceStatus').textContent=data.completed.includes(n)?'✓ Bạn đã đánh dấu hoàn thành ngày này.':'Chưa đánh dấu hoàn thành.'}
+function nextPracticeDay(){$('dayPicker').value=Math.min(365,Number($('dayPicker').value)+1);showPracticeDay()}
+function completePractice(){let n=Number($('dayPicker').value);if(!data.completed.includes(n))data.completed.push(n);saveData();showPracticeDay();updateProgress();toast('Đã ghi nhận ngày thực hành')}
+function increment(id){data.counters[id]=(data.counters[id]||0)+1;$(id).textContent=data.counters[id];saveData();updateProgress()}
+function resetCounter(id){if(confirm('Đặt lại bộ đếm này?')){data.counters[id]=0;$(id).textContent=0;saveData();updateProgress()}}
+function addVow(){let v=$('vowInput').value.trim();if(!v)return toast('Hãy nhập một nguyện lành');data.vows.push({text:v,done:false});$('vowInput').value='';saveData();renderVows()}
+function renderVows(){$('vowList').innerHTML=data.vows.map((v,i)=>`<div class="library-item"><label><input type="checkbox" ${v.done?'checked':''} onchange="toggleVow(${i},this.checked)"> <span style="${v.done?'text-decoration:line-through;opacity:.6':''}">${escapeHTML(v.text)}</span></label><button class="small danger" onclick="deleteVow(${i})">Xóa</button></div>`).join('')||'<p class="muted">Chưa có nguyện lành nào.</p>'}
+function toggleVow(i,b){data.vows[i].done=b;saveData();renderVows()}
+function deleteVow(i){data.vows.splice(i,1);saveData();renderVows()}
+function saveJournal(){let title=$('meritTitle').value.trim(),note=$('dedication').value.trim();if(!title&&!note)return toast('Hãy ghi một việc thiện hoặc lời hồi hướng');data.journal.unshift({date:new Date().toLocaleDateString('vi-VN'),title,note});saveData();$('meritTitle').value='';$('dedication').value='';renderJournal();toast('Đã lưu nhật ký trên thiết bị')}
+function renderJournal(){$('journalList').innerHTML=data.journal.slice(0,8).map(x=>`<div class="library-item"><span class="tag">${escapeHTML(x.date)}</span><p><b>${escapeHTML(x.title||'Lời hồi hướng')}</b></p><p>${escapeHTML(x.note||'')}</p></div>`).join('')||'<p class="muted">Nhật ký của bạn sẽ hiển thị tại đây.</p>'}
+function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function updateProgress(){let total=data.completed.length,percent=Math.min(100,Math.round(total/365*100));$('dailyProgress').style.width=percent+'%';$('progressText').textContent=`Đã hoàn thành ${total}/365 ngày (${percent}%).`}
+const features=[['🔖','Đánh dấu bài đọc','Lưu lại nội dung muốn đọc tiếp.'],['🔎','Tìm kiếm thư viện','Lọc bài theo từ khóa.'],['🔊','Đọc thành tiếng','Dùng giọng đọc tiếng Việt của thiết bị.'],['🔠','Điều chỉnh cỡ chữ','Tăng giảm cỡ chữ khi đọc.'],['🌙','Chế độ đọc tập trung','Giảm yếu tố gây xao nhãng.'],['🗓️','Lịch 365 ngày','Gợi ý thực hành mỗi ngày.'],['✅','Theo dõi ngày tu tập','Đánh dấu ngày đã hoàn thành.'],['📿','Đếm niệm Phật','Ghi nhận số lần thực hành.'],['📖','Đếm thời khóa kinh','Ghi nhận số thời khóa.'],['🕯️','Đếm Chú Đại Bi','Theo dõi số biến trì tụng.'],['🌼','Đếm Chú Vãng Sanh','Theo dõi số biến trì tụng.'],['⏱️','Đồng hồ tĩnh tâm','Dành thời gian an trú.'],['🎴','Rút thẻ chiêm nghiệm','Nhận lời nhắc thiện lành.'],['🪷','Quản lý Đại Nguyện','Lập và đánh dấu nguyện lành.'],['📝','Nhật ký công đức','Ghi việc thiện và biết ơn.'],['🙏','Lời hồi hướng','Ghi lại tâm nguyện hồi hướng.'],['💾','Sao lưu dữ liệu','Xuất hoặc nhập dữ liệu cá nhân.'],['📈','Tiến độ tu tập','Theo dõi số ngày đã thực hành.']];
+$('featureGrid').innerHTML=features.map(f=>`<div class="feature"><b>${f[0]} ${f[1]}</b><small>${f[2]}</small></div>`).join('');
+function exportData(){let blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='thuong-nguyen-du-lieu-tu-tap.json';a.click();URL.revokeObjectURL(url)}
+function importData(e){let file=e.target.files[0];if(!file)return;let r=new FileReader();r.onload=()=>{try{let x=JSON.parse(r.result);data={...defaultData,...x};saveData();init();toast('Đã nhập dữ liệu')}catch(err){toast('Tệp dữ liệu không hợp lệ')}};r.readAsText(file)}
+function clearLocalData(){if(confirm('Xóa toàn bộ dữ liệu tu tập đã lưu trên trình duyệt này?')){localStorage.removeItem(storageKey);data=structuredClone(defaultData);init();toast('Đã xóa dữ liệu trên thiết bị')}}
+function init(){Object.keys(data.counters).forEach(k=>$(k).textContent=data.counters[k]||0);document.documentElement.style.fontSize=(data.settings.font||16)+'px';renderLibrary();renderVows();renderJournal();showPracticeDay();updateProgress();$('todayLabel').textContent=new Date().toLocaleDateString('vi-VN');}
+init();
 
-        // Điều khiển đóng Modal
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = "none";
-        }
+// Expansion data and tools
+data.gratitude = data.gratitude || [];
+data.bookmarks = data.bookmarks || [];
+let meditationRemaining=300, meditationInterval=null, breathInterval=null, breathStep=0;
+function setMeditationTime(){meditationRemaining=Number($('timerMinutes').value)*60;renderMeditationClock()}
+function renderMeditationClock(){let m=Math.floor(meditationRemaining/60),s=meditationRemaining%60;$('meditationClock').textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0')}
+function startMeditation(){if(meditationInterval)return; if(meditationRemaining<=0)setMeditationTime();$('timerMessage').textContent='Đang thực hành: giữ tư thế thoải mái và tỉnh thức.';meditationInterval=setInterval(()=>{meditationRemaining--;renderMeditationClock();if(meditationRemaining<=0){pauseMeditation();$('timerMessage').textContent='Thời gian đã kết thúc. Hãy nhẹ nhàng trở lại với hiện tại.';toast('Hoàn thành thời gian tĩnh tâm');}},1000)}
+function pauseMeditation(){clearInterval(meditationInterval);meditationInterval=null}
+function resetMeditation(){pauseMeditation();setMeditationTime();$('timerMessage').textContent='Đồng hồ đã được đặt lại.'}
+function startBreathing(){stopBreathing();const steps=['Hít vào nhẹ nhàng…','Thở ra chậm rãi…'];breathStep=0;$('breathGuide').textContent=steps[0];breathInterval=setInterval(()=>{breathStep=(breathStep+1)%2;$('breathGuide').textContent=steps[breathStep];},5000);setTimeout(stopBreathing,60000)}
+function stopBreathing(){clearInterval(breathInterval);breathInterval=null;if($('breathGuide'))$('breathGuide').textContent='Kết thúc bài tập. Hãy tiếp tục thở tự nhiên và thư giãn.'}
+function saveGratitude(){let t=$('gratitudeInput').value.trim();if(!t)return toast('Hãy ghi điều bạn biết ơn');data.gratitude.unshift({date:new Date().toLocaleDateString('vi-VN'),text:t});$('gratitudeInput').value='';saveData();renderGratitude();updateExtraStats();toast('Đã lưu sổ tay biết ơn')}
+function renderGratitude(){$('gratitudeList').innerHTML=data.gratitude.slice(0,5).map(x=>`<div class="library-item"><span class="tag">${escapeHTML(x.date)}</span><p>${escapeHTML(x.text)}</p></div>`).join('')||'<p class="muted">Chưa có ghi chú biết ơn.</p>'}
+function addBookmark(){let t=$('bookmarkInput').value.trim();if(!t)return toast('Nhập nội dung cần ghim');data.bookmarks.unshift(t);$('bookmarkInput').value='';saveData();renderBookmarks();toast('Đã ghim nội dung')}
+function renderBookmarks(){$('bookmarkList').innerHTML=data.bookmarks.map((x,i)=>`<div class="library-item">${escapeHTML(x)} <button class="small danger" onclick="removeBookmark(${i})">Bỏ ghim</button></div>`).join('')||'<p class="muted">Chưa có nội dung được ghim.</p>'}
+function removeBookmark(i){data.bookmarks.splice(i,1);saveData();renderBookmarks()}
+function resetRoutine(){document.querySelectorAll('.routineCheck').forEach(x=>x.checked=false);toast('Đã đặt lại checklist thời khóa')}
+function updateExtraStats(){if(!$('statDays'))return;$('statDays').textContent=data.completed.length;$('statVows').textContent=data.vows.length;$('statJournal').textContent=data.journal.length;$('statCounts').textContent=Object.values(data.counters).reduce((a,b)=>a+(Number(b)||0),0)}
+const futureIdeas=[
+['🧭','Bản đồ hành trình','Theo dõi các chặng tu học cá nhân.'],['🎯','Mục tiêu tuần','Đặt mục tiêu nhỏ theo tuần.'],['📆','Lịch ngày lễ','Ghi chú ngày lễ và ngày kỷ niệm.'],['🔔','Nhắc thời khóa','Nhắc bằng thông báo khi mở trang.'],['📔','Nhật ký cảm xúc','Quan sát tâm trạng không phán xét.'],['🪷','Vườn công đức','Hiển thị biểu tượng cho việc thiện đã ghi.'],['🤝','Việc thiện cộng đồng','Lập danh sách việc có ích cho cộng đồng.'],['🧘','Thư giãn cơ thể','Hướng dẫn thả lỏng từng vùng cơ thể.'],['📚','Kệ sách cá nhân','Phân loại bài đọc yêu thích.'],['🗂️','Bộ sưu tập chủ đề','Lưu bài theo chủ đề thực hành.'],['🕊️','Lời chúc an lành','Tạo lời chúc thiện lành để chia sẻ.'],['🧾','Báo cáo tháng','Tổng kết thời khóa và ghi chú.'],['🌱','Thử thách 7 ngày','Thực tập một thói quen thiện lành.'],['🌕','Thử thách 21 ngày','Theo dõi sự đều đặn trong tu tập.'],['🧩','Câu hỏi tự quán','Gợi ý câu hỏi chiêm nghiệm mỗi ngày.'],['🗣️','Ghi âm suy ngẫm','Ghi âm bằng thiết bị nếu hỗ trợ.'],['📤','Chia sẻ nhật ký','Xuất ghi chú để tự lưu trữ.'],['🔐','Khóa riêng tư','Bảo vệ nội dung trên thiết bị dùng chung.'],['📊','Biểu đồ tiến độ','Xem thống kê theo tuần/tháng.'],['🌐','Đa ngôn ngữ','Bổ sung giao diện nhiều ngôn ngữ.'],['🎨','Chủ đề giao diện','Chọn màu sắc và kiểu hiển thị.'],['🖨️','In thời khóa','In checklist hoặc nhật ký.'],['🧑‍🤝‍🧑','Nhóm tu học','Không gian sinh hoạt có quản trị.'],['☁️','Đồng bộ đám mây','Đồng bộ an toàn qua tài khoản.']
+];
+$('futureIdeas').innerHTML=futureIdeas.map(x=>`<div class="feature"><b>${x[0]} ${x[1]}</b><small>${x[2]}</small></div>`).join('');
+const oldInit=init;
+init=function(){oldInit();data.gratitude=data.gratitude||[];data.bookmarks=data.bookmarks||[];renderGratitude();renderBookmarks();updateExtraStats();setMeditationTime()};
+init();
 
-        // Đóng modal khi bấm ra ngoài vùng nội dung
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.style.display = "none";
-            }
-        }
-    </script>
+
+// Supreme 2027 local-first features
+data.moods=data.moods||[];data.deeds=data.deeds||[];data.community=data.community||[];data.groups=data.groups||[];data.collections=data.collections||[];data.challenge=data.challenge||null;data.privacyPin=data.privacyPin||'';
+let chosenMood='',relaxIndex=0,recorder=null,recordChunks=[];
+const relaxSteps=['Thả lỏng cơ mặt và hàm. Không cần thay đổi hơi thở.','Nhẹ nhàng thả vai xuống, cảm nhận cánh tay được nghỉ ngơi.','Thả lỏng bàn tay và các ngón tay.','Cảm nhận lưng và vùng bụng, giữ tư thế dễ chịu.','Thả lỏng chân, bàn chân; nếu khó chịu hãy đổi tư thế.','Nhìn quanh, trở về với không gian hiện tại và kết thúc nhẹ nhàng.'];
+const blessings=['Nguyện bạn có một ngày bình an, tâm sáng và lòng rộng mở.','Chúc bạn đủ kiên nhẫn để học hỏi, đủ dịu dàng để cảm thông.','Mong những việc thiện nhỏ hôm nay góp phần làm cuộc sống ấm áp hơn.','Nguyện mọi người được an ổn, được tôn trọng và có cơ hội sống tốt đẹp.'];
+const reflections=['Hôm nay mình có thể làm điều gì nhỏ bé để giảm bớt khổ đau cho một người?','Có lời nói nào mình muốn nói lại bằng sự chân thành và ái ngữ?','Điều gì mình đang cố chấp, và có thể nhìn nó bằng góc nhìn rộng hơn không?','Mình đã chăm sóc thân tâm và môi trường sống như thế nào hôm nay?','Một việc thiện cụ thể nào mình có thể thực hiện trong ngày mai?'];
+function selectMood(btn){chosenMood=btn.dataset.mood;document.querySelectorAll('.mood-btn').forEach(b=>b.classList.toggle('active',b===btn))}
+function saveMood(){if(!chosenMood)return toast('Hãy chọn cảm xúc trước');data.moods.unshift({date:new Date().toLocaleString('vi-VN'),mood:chosenMood,note:$('moodNote').value.trim()});$('moodNote').value='';chosenMood='';document.querySelectorAll('.mood-btn').forEach(b=>b.classList.remove('active'));saveData();renderMoods()}
+function renderMoods(){$('moodHistory').innerHTML=data.moods.slice(0,5).map(x=>`<div class="library-item"><span class="tag">${escapeHTML(x.date)}</span><p><b>${escapeHTML(x.mood)}</b> – ${escapeHTML(x.note)}</p></div>`).join('')||'<p class="muted">Chưa có nhật ký cảm xúc.</p>'}
+function addGoodDeed(){let t=$('deedInput').value.trim();if(!t)return toast('Hãy ghi một việc thiện');data.deeds.unshift({date:new Date().toLocaleDateString('vi-VN'),text:t});$('deedInput').value='';saveData();renderDeeds();updateSupremeStats()}
+function renderDeeds(){$('deedList').innerHTML=data.deeds.slice(0,8).map(x=>`<div class="library-item">🌱 <b>${escapeHTML(x.text)}</b><br><small class="muted">${escapeHTML(x.date)}</small></div>`).join('')||'<p class="muted">Khu vườn đang chờ hạt giống đầu tiên.</p>';$('goodDeedsCount').textContent=data.deeds.length;$('gardenTrees').textContent=data.deeds.length}
+function addCommunity(){let t=$('communityTitle').value.trim(),d=$('communityDetail').value.trim();if(!t)return toast('Nhập tên hoạt động');data.community.unshift({title:t,detail:d,date:new Date().toLocaleDateString('vi-VN')});$('communityTitle').value='';$('communityDetail').value='';saveData();renderCommunity()}
+function renderCommunity(){$('communityList').innerHTML=data.community.map(x=>`<div class="library-item"><b>${escapeHTML(x.title)}</b><p>${escapeHTML(x.detail)}</p><small class="muted">${escapeHTML(x.date)}</small></div>`).join('')||'<p class="muted">Chưa có hoạt động cộng đồng.</p>'}
+function addGroupRecord(){let n=$('groupName').value.trim(),a=$('groupActivity').value.trim();if(!n||!a)return toast('Nhập tên nhóm và nội dung sinh hoạt');data.groups.unshift({name:n,activity:a,date:new Date().toLocaleDateString('vi-VN')});saveData();renderGroups();$('groupActivity').value=''}
+function renderGroups(){$('groupList').innerHTML=data.groups.map(x=>`<div class="library-item"><b>${escapeHTML(x.name)}</b><p>${escapeHTML(x.activity)}</p><small class="muted">${escapeHTML(x.date)}</small></div>`).join('')||'<p class="muted">Chưa có ghi chú nhóm.</p>'}
+function nextRelax(){relaxIndex=(relaxIndex+1)%relaxSteps.length;$('relaxText').textContent=relaxSteps[relaxIndex]}
+function resetRelax(){relaxIndex=0;$('relaxText').textContent=relaxSteps[0]}
+function addCollection(){let t=$('collectionTitle').value.trim(),topic=$('collectionTopic').value;if(!t)return toast('Nhập tên sách hoặc bài đọc');data.collections.unshift({title:t,topic});$('collectionTitle').value='';saveData();renderCollections()}
+function renderCollections(){$('collectionList').innerHTML=data.collections.map((x,i)=>`<div class="library-item"><span class="tag">${escapeHTML(x.topic)}</span><p><b>${escapeHTML(x.title)}</b></p><button class="small danger" onclick="removeCollection(${i})">Xóa</button></div>`).join('')||'<p class="muted">Kệ sách cá nhân đang trống.</p>'}
+function removeCollection(i){data.collections.splice(i,1);saveData();renderCollections()}
+function newBlessing(){$('blessingText').textContent=blessings[Math.floor(Math.random()*blessings.length)]}
+async function copyBlessing(){let t=$('blessingText').textContent;try{await navigator.clipboard.writeText(t);toast('Đã sao chép lời chúc')}catch(e){toast('Thiết bị chưa cho phép sao chép tự động')}}
+function startChallenge(days){data.challenge={days,start:new Date().toISOString().slice(0,10),done:[]};saveData();renderChallenge()}
+function renderChallenge(){let c=data.challenge;if(!c){$('challengePanel').textContent='Chưa có thử thách đang hoạt động.';return}$('challengePanel').innerHTML=`<b>Thử thách ${c.days} ngày</b><br>Ngày bắt đầu: ${escapeHTML(c.start)}<br>Đã hoàn thành: ${c.done.length}/${c.days}<div class="progress"><i style="width:${Math.min(100,c.done.length/c.days*100)}%"></i></div><button class="small primary" onclick="completeChallengeDay()">Đánh dấu hôm nay</button> <button class="small" onclick="startChallenge(${c.days})">Bắt đầu lại</button>`}
+function completeChallengeDay(){if(!data.challenge)return;let today=new Date().toISOString().slice(0,10);if(!data.challenge.done.includes(today))data.challenge.done.push(today);saveData();renderChallenge();toast('Đã ghi nhận ngày thử thách')}
+function newReflection(){$('reflectionQuestion').textContent=reflections[Math.floor(Math.random()*reflections.length)]}
+function startRecording(){if(!navigator.mediaDevices?.getUserMedia||!window.MediaRecorder)return toast('Trình duyệt chưa hỗ trợ ghi âm');navigator.mediaDevices.getUserMedia({audio:true}).then(stream=>{recordChunks=[];recorder=new MediaRecorder(stream);recorder.ondataavailable=e=>{if(e.data.size)recordChunks.push(e.data)};recorder.onstop=()=>{let blob=new Blob(recordChunks,{type:recorder.mimeType||'audio/webm'}),url=URL.createObjectURL(blob);$('recordPlayback').src=url;$('recordPlayback').style.display='block';stream.getTracks().forEach(t=>t.stop());$('recordStatus').textContent='Đã tạo bản ghi âm tạm thời. Hãy tải hoặc lưu riêng nếu muốn giữ lâu dài.';let a=document.createElement('a');a.href=url;a.download='suy-ngam-'+Date.now()+'.webm';a.textContent='Tải bản ghi âm';a.className='btn small';$('recordStatus').append(' ',a)};recorder.start();$('recordStatus').textContent='Đang ghi âm…'}).catch(()=>toast('Không thể truy cập microphone. Kiểm tra quyền trình duyệt.'))}
+function stopRecording(){if(recorder&&recorder.state!=='inactive')recorder.stop()}
+function askBuddhistAssistant(){let q=$('assistantQuestion').value.trim().toLowerCase();if(!q)return toast('Hãy nhập câu hỏi');let bank=[[/từ bi|lòng thương/,'Từ bi là thái độ mong muốn chúng sinh được an vui và giảm bớt khổ đau. Có thể thực tập bằng lắng nghe, không gây tổn hại và giúp đỡ trong khả năng.'],[/vô thường/,'Vô thường nhắc rằng mọi hiện tượng đều thay đổi. Quán chiếu điều này có thể giúp ta bớt chấp trước và trân trọng hiện tại.'],[/chánh niệm|hơi thở/,'Chánh niệm là nhận biết rõ điều đang diễn ra trong thân và tâm. Bạn có thể bắt đầu bằng vài phút chú ý hơi thở tự nhiên, không ép buộc.'],[/nghiệp|nhân quả/,'Các truyền thống Phật giáo giải thích nghiệp và nhân quả với nhiều lớp nghĩa. Nên tìm hiểu trong kinh luận và trao đổi với vị thầy đáng tin cậy; tránh dùng khái niệm này để phán xét người đang gặp khổ đau.'],[/thiền/,'Hãy chọn tư thế an toàn, thư giãn và thực tập trong thời lượng vừa sức. Nếu thấy khó chịu, hãy dừng lại và trở về sinh hoạt bình thường.'],[/kinh/,'Bạn có thể tìm hiểu kinh điển qua bản dịch có ghi rõ dịch giả, nguồn ấn bản và truyền thống. Nội dung trong trang này chỉ là phần giới thiệu, không thay thế nguyên văn kinh.']];let found=bank.find(x=>x[0].test(q));$('assistantAnswer').textContent=found?found[1]:'Mình chưa có câu trả lời được kiểm chứng cho câu hỏi này. Bạn hãy tham khảo kinh sách có nguồn rõ ràng hoặc hỏi vị giáo thọ. Trợ lý hiện hoạt động theo bộ câu trả lời tham khảo ngoại tuyến.'}
+function renderMonthlyReport(){let m=$('reportMonth').value;if(!m)return;let days=data.completed.length,counts=Object.values(data.counters).reduce((a,b)=>a+(Number(b)||0),0),journal=data.journal.length,good=data.deeds.length;$('monthlyReport').textContent=`Tổng quan dữ liệu hiện có (chưa phân loại theo ngày cho mọi bộ đếm): ${days} ngày tu tập đã đánh dấu; ${counts} lượt đếm thực hành; ${journal} ghi chú nhật ký; ${good} việc thiện. Báo cáo chi tiết theo tháng sẽ chính xác hơn khi các mục được gắn ngày trong phiên bản sau.`}
+function printPractice(){window.print()}
+function setPrivacyPin(){let p=$('privacyPin').value;if(!/^\d{4,8}$/.test(p))return toast('PIN cần có từ 4 đến 8 chữ số');data.privacyPin=p;saveData();$('privacyPin').value='';$('privacyStatus').textContent='Đã thiết lập PIN khóa giao diện trên thiết bị này.';toast('Đã thiết lập PIN')}
+function lockApp(){if(!data.privacyPin)return toast('Hãy thiết lập PIN trước');$('privacyOverlay').classList.add('show');document.querySelectorAll('body > header, body > main, body > footer').forEach(x=>x.style.filter='blur(8px)')}
+function unlockApp(fromModal=false){let p=fromModal?$('unlockPin').value:$('privacyPin').value;if(!data.privacyPin)return toast('Chưa thiết lập PIN');if(p!==data.privacyPin){if($('unlockError'))$('unlockError').textContent='Mã PIN không đúng.';return} $('privacyOverlay').classList.remove('show');document.querySelectorAll('body > header, body > main, body > footer').forEach(x=>x.style.filter='');$('unlockPin').value='';$('privacyStatus').textContent='Giao diện đã mở khóa.'}
+function shareJournal(){let textOut=data.journal.map(x=>`${x.date}\n${x.title}\n${x.note}`).join('\n\n')||'Chưa có nhật ký.';let blob=new Blob([textOut],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='nhat-ky-hoi-huong.txt';a.click();URL.revokeObjectURL(url)}
+function syncExport(){exportData();$('syncStatus').textContent='Đã tạo tệp sao lưu để bạn tải lên dịch vụ lưu trữ riêng. Chưa có kết nối cloud tự động.'}
+function setTheme(t){let root=document.documentElement;if(t==='blue'){root.style.setProperty('--gold','#a9efff');root.style.setProperty('--cyan','#82d8ff');document.body.style.background='linear-gradient(145deg,#061522,#102b46,#081522)'}else if(t==='dark'){root.style.setProperty('--gold','#e0d5c1');root.style.setProperty('--cyan','#b5c7c9');document.body.style.background='linear-gradient(145deg,#090b12,#191b25)'}else{root.style.setProperty('--gold','#f6d879');root.style.setProperty('--cyan','#83e8e5');document.body.style.background=''}}
+function changeLanguage(){let en=$('languageChoice').value==='en';document.documentElement.lang=en?'en':'vi';$('languageNote').textContent=en?'Basic interface language selected. Library and spiritual texts remain mostly in Vietnamese.':'Một số nhãn giao diện sẽ đổi ngôn ngữ; nội dung thư viện hiện chủ yếu bằng tiếng Việt.';toast(en?'English beta selected':'Đã chọn Tiếng Việt')}
+function updateSupremeStats(){if(!$('goodDeedsCount'))return;renderDeeds();$('statDays').textContent=data.completed.length;$('statVows').textContent=data.vows.length;$('statJournal').textContent=data.journal.length;$('statCounts').textContent=Object.values(data.counters).reduce((a,b)=>a+(Number(b)||0),0)}
+const previousInit=init;
+init=function(){previousInit();data.moods=data.moods||[];data.deeds=data.deeds||[];data.community=data.community||[];data.groups=data.groups||[];data.collections=data.collections||[];data.challenge=data.challenge||null;data.privacyPin=data.privacyPin||'';renderMoods();renderDeeds();renderCommunity();renderGroups();renderCollections();renderChallenge();updateSupremeStats();if($('reportMonth')){$('reportMonth').value=new Date().toISOString().slice(0,7);renderMonthlyReport()}};
+init();
+
+</script>
 </body>
 </html>
